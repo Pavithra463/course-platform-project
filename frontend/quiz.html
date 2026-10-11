@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Programming Practice Quiz</h1>
+    <p class="subtitle">Answer the questions below and submit to see your score</p>
+
+    <form id="quizForm">
+
+      <div class="form-group">
+        <label>1. Which keyword is used to create a class in Java?</label>
+        <select id="q1">
+          <option value="">-- Select --</option>
+          <option value="class">class</option>
+          <option value="object">object</option>
+          <option value="define">define</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>2. Which of these is NOT a Java data type?</label>
+        <select id="q2">
+          <option value="">-- Select --</option>
+          <option value="int">int</option>
+          <option value="string">string (lowercase)</option>
+          <option value="boolean">boolean</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>3. Which SQL keyword is used to fetch data from a table?</label>
+        <select id="q3">
+          <option value="">-- Select --</option>
+          <option value="GET">GET</option>
+          <option value="SELECT">SELECT</option>
+          <option value="FETCH">FETCH</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>4. What does CSS stand for?</label>
+        <select id="q4">
+          <option value="">-- Select --</option>
+          <option value="Cascading Style Sheets">Cascading Style Sheets</option>
+          <option value="Creative Style System">Creative Style System</option>
+          <option value="Computer Style Sheets">Computer Style Sheets</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>5. Which symbol is used for comments in JavaScript (single line)?</label>
+        <select id="q5">
+          <option value="">-- Select --</option>
+          <option value="#">#</option>
+          <option value="//">//</option>
+          <option value="--">--</option>
+        </select>
+      </div>
+
+      <button type="submit" id="submitBtn">Submit Quiz</button>
+      <p id="resultMsg" class="success"></p>
+    </form>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
