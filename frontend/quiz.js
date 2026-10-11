@@ -26,6 +26,11 @@ quizForm.addEventListener("submit", async function (e) {
 
   // Get the logged-in username (we will save this during login in the next step)
   const username = localStorage.getItem("loggedInUsername") || "Guest";
+    if (location.hostname.endsWith("github.io")) {
+    resultMsg.textContent = `You scored ${score} out of ${totalQuestions}. Demo mode: scores are saved to MySQL only when the backend runs locally.`;
+    resultMsg.style.color = "#28a745";
+    return;
+  }
 
   // Send the score to the backend
   try {

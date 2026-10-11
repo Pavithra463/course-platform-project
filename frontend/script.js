@@ -46,6 +46,13 @@ form.addEventListener("submit", async function (e) {
   }
 
   if (isValid) {
+    if (location.hostname.endsWith("github.io")) {
+      localStorage.setItem("loggedInUsername", username.value.trim());
+      successMsg.textContent = "Demo mode: the backend runs only on a local computer. Opening the quiz...";
+      successMsg.style.color = "#28a745";
+      setTimeout(() => { window.location.href = "quiz.html"; }, 1200);
+      return;
+    }
     try {
       const response = await fetch('http://localhost:5000/login', {
         method: 'POST',
